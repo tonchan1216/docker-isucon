@@ -23,6 +23,8 @@ services:
       - app
     ports:
       - "80:80"
+    volumes:
+      - /home/tohn/docker-isucon/isucon7-qualifier/nginx-log:/var/log/nginx
   app:
     build:
       context: ./docker/app/golang
